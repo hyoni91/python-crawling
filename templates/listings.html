@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物件一覧</title>
+</head>
+<body>
+    <h1 >名護の最新の物件情報</h1>
+    <ul>
+        {% for bukken in bukken_list %}
+            <li>
+                <strong>{{ bukken.header }}</strong> / {{ bukken.price }} / {{ bukken.madori }}<br>
+                <a href="{{ bukken.link }}" target="_blank">詳細を見る</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
