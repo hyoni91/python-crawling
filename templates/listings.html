@@ -1,17 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>物件一覧</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        li {
+            background-color: #ffffff;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        strong {
+            font-size: 18px;
+            color: #2c3e50;
+        }
+    </style>
 </head>
 <body>
-    <h1 >名護の最新の物件情報</h1>
+    <h1>名護の最新の物件情報</h1>
     <ul>
         {% for bukken in bukken_list %}
             <li>
                 <strong>{{ bukken.header }}</strong> / {{ bukken.price }} / {{ bukken.madori }}<br>
-                <a href="{{ bukken.link }}" target="_blank">詳細を見る</a>
+                <a href="{{ bukken.link }}" target="_blank">▶ 詳細を見る</a>
             </li>
         {% endfor %}
     </ul>
